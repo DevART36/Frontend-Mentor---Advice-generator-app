@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://api.adviceslip.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Advice Slip JSON API</title>
+		<link href="./Advice Slip JSON API_files/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="./Advice Slip JSON API_files/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<link href="./Advice Slip JSON API_files/style.css" rel="stylesheet" media="screen">
+    	<link rel="stylesheet" href="./Advice Slip JSON API_files/prettify.css">
+	</head>
+	<body>
+		<div id="maincontent">
+			<div class="container-fluid container-narrow">
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<h4><span>Advice Slip JSON API</span></h4>
+					</div>
+				</div>
+			</div>
+			<div class="container-semifluid container-fluid container-narrow">
+				<div class="row-fluid">
+					<div class="span3">
+						<div class="well" id="sidebar">
+							<ul class="nav nav-list">
+								<li class="docsection nav-header"><a href="https://api.adviceslip.com/#top">Advice Slip JSON API</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Endpoints</li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#endpoint-random">Random advice</a></li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#endpoint-id">Advice by ID</a></li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#endpoint-search">Searching advice</a></li>
+								<li class="nav-header">Errors and notices</li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#messages">Messages</a></li>
+								<li class="nav-header">Objects</li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#object-slip">Slip object</a></li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#object-search">Search object</a></li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#object-message">Message object</a></li>
+								<li class="nav-header">RSS</li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#rss-daily">Daily advice feed</a></li>
+								<li class="nav-header">Berg</li>
+								<li class="docsection"><a href="https://api.adviceslip.com/#berg-littleprinter">Berg Little Printer</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="span9">
+
+						<h1><a href="https://api.adviceslip.com/#top" name="top">Advice Slip JSON API</a></h1>
+
+						<div class="msg">
+							<p>The Advice Slip JSON API is provided for free. 😎 It currently gives out over 10 million pieces of advice every year. If you would like to say thank-you to the creator, then please <a href="https://ko-fi.com/tomkiss">buy them a coffee or beer!</a> ☕️🍺</p>
+
+
+							<script type="text/javascript" async="" src="./Advice Slip JSON API_files/analytics.js.download"></script><script type="text/javascript" src="./Advice Slip JSON API_files/Widget_2.js.download"></script><script type="text/javascript">kofiwidget2.init('Support Me on Ko-fi', '#0088cc', 'R6R86JH1S');kofiwidget2.draw();</script><style>img.kofiimg{display: initial!important;vertical-align:middle;height:13px!important;width:20px!important;padding-top:0!important;padding-bottom:0!important;border:none;margin-top:0;margin-right:5px!important;margin-left:0!important;margin-bottom:3px!important;content:url('https://storage.ko-fi.com/cdn/cup-border.png')}.kofiimg:after{vertical-align:middle;height:25px;padding-top:0;padding-bottom:0;border:none;margin-top:0;margin-right:6px;margin-left:0;margin-bottom:4px!important;content:url('https://storage.ko-fi.com/cdn/whitelogo.svg')}.btn-container{display:inline-block!important;white-space:nowrap;min-width:160px}span.kofitext{color:#fff !important;letter-spacing: -0.15px!important;text-wrap:none;vertical-align:middle;line-height:33px !important;padding:0;text-align:center;text-decoration:none!important; text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);}.kofitext a{color:#fff !important;text-decoration:none:important;}.kofitext a:hover{color:#fff !important;text-decoration:none}a.kofi-button{box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);line-height:36px!important;min-width:150px;display:inline-block!important;background-color:#29abe0;padding:2px 12px !important;text-align:center !important;border-radius:7px;color:#fff;cursor:pointer;overflow-wrap:break-word;vertical-align:middle;border:0 none #fff !important;font-family:'Quicksand',Helvetica,Century Gothic,sans-serif !important;text-decoration:none;text-shadow:none;font-weight:700!important;font-size:14px !important}a.kofi-button:visited{color:#fff !important;text-decoration:none !important}a.kofi-button:hover{opacity:.85;color:#f5f5f5 !important;text-decoration:none !important}a.kofi-button:active{color:#f5f5f5 !important;text-decoration:none !important}.kofitext img.kofiimg {height:15px!important;width:22px!important;display: initial;animation: kofi-wiggle 3s infinite;}@keyframes kofi-wiggle{0%{transform:rotate(0) scale(1)}60%{transform:rotate(0) scale(1)}75%{transform:rotate(0) scale(1.12)}80%{transform:rotate(0) scale(1.1)}84%{transform:rotate(-10deg) scale(1.1)}88%{transform:rotate(10deg) scale(1.1)}92%{transform:rotate(-10deg) scale(1.1)}96%{transform:rotate(10deg) scale(1.1)}100%{transform:rotate(0) scale(1)}}</style><link href="./Advice Slip JSON API_files/css" rel="stylesheet" type="text/css"><div class="btn-container"><a title="Support me on ko-fi.com" class="kofi-button" style="background-color:#0088cc;" href="https://ko-fi.com/R6R86JH1S" target="_blank"> <span class="kofitext"><img src="./Advice Slip JSON API_files/cup-border.png" alt="Ko-fi donations" class="kofiimg">Support Me on Ko-fi</span></a></div>
+ 
+						</div>
+
+						<!-- Random advice -->
+						<div class="apisection">
+							<h2><a href="https://api.adviceslip.com/#endpoint-random" name="random">Random advice</a></h2>
+							<p>Note: <em>Advice is cached for 2 seconds. Any repeat-request within 2 seconds will return the same piece of advice</em>.</p>
+							<table class="table table-striped table-bordered">
+								<tbody>
+									<tr>
+										<th>HTTP Method</th>
+										<td><span>GET</span></td>
+									</tr>
+									<tr>
+										<th>URL</th>
+										<td><a href="https://api.adviceslip.com/advice"><span class="url">https://api.adviceslip.com/advice</span></a></td>
+									</tr>
+									<tr>
+										<th>Description</th>
+										<td>Returns a random advice slip as a <a href="https://api.adviceslip.com/#object-slip">slip object</a>.</td>
+									</tr>
+									<tr>
+					                    <th>Parameters</th>
+					                    <td>
+					                      <dl class="dl-horizontal">
+					                        <dt>callback</dt>
+					                        <dd><span>string</span> To define your own callback function name and return the JSON in a function wrapper (as JSONP), add the parameter <span>callback</span> with your desired name as the value.</dd>
+					                      </dl>
+					                    </td>
+					                  </tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Advice by ID -->
+						<div class="apisection">
+							<h2><a href="https://api.adviceslip.com/#endpoint-id" name="endpoint-id">Advice by ID</a></h2>
+							<table class="table table-striped table-bordered">
+								<tbody>
+									<tr>
+										<th>HTTP Method</th>
+										<td><span>GET</span></td>
+									</tr>
+									<tr>
+										<th>URL</th>
+										<td><a href="https://api.adviceslip.com/advice/1"><span class="url">https://api.adviceslip.com/advice/{slip_id}</span></a></td>
+									</tr>
+									<tr>
+										<th>Description</th>
+										<td>If an advice slip is found with the corresponding <span class="code">{slip_id}</span>, a <a href="https://api.adviceslip.com/#object-slip">slip object</a> is returned.</td>
+									</tr>
+									<tr>
+					                    <th>Parameters</th>
+					                    <td>
+					                      <dl class="dl-horizontal">
+					                        <dt>callback</dt>
+					                        <dd><span>string</span> To define your own callback function name and return the JSON in a function wrapper (as JSONP), add the parameter <span>callback</span> with your desired name as the value.</dd>
+					                      </dl>
+					                    </td>
+					                  </tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Searching for advice -->
+						<div class="apisection">
+							<h2><a href="https://api.adviceslip.com/#endpoint-search" name="endpoint-search">Searching advice</a></h2>
+							<table class="table table-striped table-bordered">
+								<tbody>
+									<tr>
+										<th>HTTP Method</th>
+										<td><span>GET</span></td>
+									</tr>
+									<tr>
+										<th>URL</th>
+										<td><a href="https://api.adviceslip.com/advice/search/spiders"><span class="url">https://api.adviceslip.com/advice/search/{query}</span></a></td>
+									</tr>
+									<tr>
+										<th>Description</th>
+										<td>If an advice slip is found, containing the corresponding search term in <span class="code">{query}</span>, an array of <a href="https://api.adviceslip.com/#object-slip">slip objects</a> is returned inside a <a href="https://api.adviceslip.com/#object-search">search object</a>.</td>
+									</tr>
+									<tr>
+					                    <th>Parameters</th>
+					                    <td>
+					                      <dl class="dl-horizontal">
+					                        <dt>callback</dt>
+					                        <dd><span>string</span> To define your own callback function name and return the JSON in a function wrapper (as JSONP), add the parameter <span>callback</span> with your desired name as the value.</dd>
+					                      </dl>
+					                    </td>
+					                  </tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Messages -->
+						<div class="apisection">
+							<h2><a href="https://api.adviceslip.com/#messages" name="messages">Messages</a></h2>
+							<p>In the event of an error occuring, a <a href="https://api.adviceslip.com/#object-message">message object</a> is returned, containing relevant information about the request.</p>
+						</div>
+
+
+						<!-- Advice slip -->
+						<h3><a href="https://api.adviceslip.com/#object-slip" name="object-slip">Slip object</a></h3>
+						<p>A slip object is a simple piece of advice.</p>
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="https://api.adviceslip.com/#object-slip-response" data-toggle="tab">Response fields</a>
+								</li>
+								<li><a href="https://api.adviceslip.com/#object-slip-example" data-toggle="tab">Example</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="object-slip-response">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>slip_id</td>
+												<td>integer</td>
+												<td>The unique ID of this advice slip.</td>
+											</tr>
+											<tr>
+												<td>advice</td>
+												<td>string</td>
+												<td>The advice being given.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane" id="object-slip-example">
+									<pre class="prettyprint lang-js"><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"slip"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"slip_id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+       </span><span class="str">"advice"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Smile and the world smiles with you. Frown and you're on your own."</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span></pre>
+								</div>
+							</div>
+						</div>
+						<p><a class="btn" href="https://api.adviceslip.com/#top">Back to top</a></p>
+
+
+						<!-- Search query -->
+						<h3><a href="https://api.adviceslip.com/#object-search" name="object-search">Search object</a></h3>
+						<p>A search object contains the results of a slip search query.</p>
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="https://api.adviceslip.com/#object-search-response" data-toggle="tab">Response fields</a>
+								</li>
+								<li><a href="https://api.adviceslip.com/#object-search-example" data-toggle="tab">Example</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="object-search-response">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>total_results</td>
+												<td>integer</td>
+												<td>Total number of matching advice slips found.</td>
+											</tr>
+											<tr>
+												<td>query</td>
+												<td>integer</td>
+												<td>The search query provided.</td>
+											</tr>
+											<tr>
+												<td>slips</td>
+												<td>string</td>
+												<td>An array of <a href="https://api.adviceslip.com/#object-slip">slip objects</a> matching the search query.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane" id="object-search-example">
+									<pre class="prettyprint lang-js"><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"total_results"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"slips"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"advice"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Remember that spiders are more afraid of you, than you are of them."</span><span class="pln">
+      </span><span class="pun">},</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+      	</span><span class="str">"advice"</span><span class="pun">:</span><span class="str">"Smile and the world smiles with you. Frown and you're on your own."</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+     </span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span></pre>
+								</div>
+							</div>
+						</div>
+						<p><a class="btn" href="https://api.adviceslip.com/#top">Back to top</a></p>
+
+
+						<!-- Message -->
+						<h3><a href="https://api.adviceslip.com/#object-message" name="object-message">Message object</a></h3>
+						<p>A messages object contains information about the status of the requested API URL.</p>
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="https://api.adviceslip.com/#object-message-response" data-toggle="tab">Response fields</a>
+								</li>
+								<li><a href="https://api.adviceslip.com/#object-message-example" data-toggle="tab">Example</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="object-message-response">
+									<table class="table table-striped table-bordered">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>type</td>
+												<td>string</td>
+												<td>The type of messages. Can be either <span class="code">noticed</span>, <span class="code">warning</span> or <span class="code">error</span>.</td>
+											</tr>
+											<tr>
+												<td>text</td>
+												<td>string</td>
+												<td>The messages being received.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane" id="object-message-example">
+									<pre class="prettyprint lang-js"><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"type"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"notice"</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Advice slip not found."</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span></pre>
+								</div>
+							</div>
+						</div>
+						<p><a class="btn" href="https://api.adviceslip.com/#top">Back to top</a></p>
+
+
+
+						<!-- RSS -->
+						<div class="apisection">
+							<h2><a href="https://api.adviceslip.com/#rss" name="rss">RSS</a></h2>
+							<p>RSS feeds allow for easy access and sharing of advice slips.</p>
+						</div>
+
+
+						<!-- Daily Advice slip -->
+						<h3><a href="https://api.adviceslip.com/#rss-daily" name="rss-daily">Daily Advice Slip</a></h3>
+						<table class="table table-striped table-bordered">
+							<tbody>
+								<tr>
+									<th>URL</th>
+									<td><a href="https://api.adviceslip.com/daily_adviceslip.rss"><span class="url">https://api.adviceslip.com/daily_adviceslip.rss</span></a></td>
+								</tr>
+								<tr>
+									<th>Description</th>
+									<td>This feed provides a single piece of advice, chosen at random daily, in a simple RSS 2.0 format.</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><a class="btn" href="https://api.adviceslip.com/#top">Back to top</a></p>
+
+
+						<!-- Berg -->
+						<div class="apisection">
+							<a href="https://api.adviceslip.com/assets/img/littleprinter-photo.jpg"><img src="./Advice Slip JSON API_files/littleprinter-photo.png" alt="Berg Little Printer" style="float: left; margin: 16px 20px 20px 0"></a>
+							<h2><a href="https://api.adviceslip.com/#berg-littleprinter" name="berg-littleprinter">Berg Little Printer</a></h2>
+							<p>If you're lucky enough to own a <a href="http://bergcloud.com/littleprinter/">Little Printer</a>, Advice Slip has required the <a href="http://remote.bergcloud.com/developers/reference">API endpoints</a> available for you to subscribe to daily advice slips.</p><p>There is also a <a href="https://api.adviceslip.com/sample/">sample edition</a> to view online.</p>
+						</div>
+						<p><a class="btn" href="https://api.adviceslip.com/#top">Back to top</a></p>
+
+						<br style="clear: both">
+
+					</div>
+				</div>
+			</div>
+			<div id="push"></div>
+		</div>
+		<div id="footer">
+			<div class="container-fluid container-narrow">
+				<div class="row-fluid">
+				<div class="span3 visible-desktop"></div>
+				<div class="span9">
+				<p class="muted credit"><a href="https://adviceslip.com/">AdviceSlip.com</a> • © Tom Kiss 2013 - 2022</p>
+				</div>
+				</div>
+			</div>
+		</div>
+		<!-- Javscript -->
+		<script src="./Advice Slip JSON API_files/jquery-1.7.2.min.js.download"></script>
+		<script src="./Advice Slip JSON API_files/bootstrap.min.js.download"></script>
+    	<script src="./Advice Slip JSON API_files/prettify.js.download"></script>
+	    <script>
+	    <!--
+	      $(document).ready(function () {
+	        // Make exmaples nice-ish
+	        prettyPrint();
+	        // Make links to top of page, go to top of page
+	        $('a[href="#top"]').click(function() {
+	          window.scrollTo(0, 0);
+	        });
+	        // Set menu whenever a link is clicked
+	        $('a[href]').click(function() {
+	          setMenu($(this).attr('href'));
+	        });
+	        // Set menu when page loads
+	        setMenu(window.location.pathname+window.location.hash);
+	      });
+
+	      // Function to make menu highlight current item
+	      function setMenu(link) {
+	        if (link.indexOf('#') >= 0) {
+	          if (link.indexOf('example') == -1 && link.indexOf('response') == -1 && link.indexOf('parameters') == -1 ) {
+	            $('.docsection').removeClass('active');
+	            var val = link.substring(link.indexOf('#'));
+	            $('li.docsection').find('a[href="'+val+'"]').closest('li.docsection').addClass('active');
+	          }
+	        }
+	      }
+	      // Reset scroll until after page loaded
+	      $(window).scrollTop(0);
+	    -->
+	    </script>
+
+			<!-- Google Analytics -->
+			<script async="" src="./Advice Slip JSON API_files/js"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-36962600-2');
+			</script>
+
+			<style>
+				.msg {
+					font-size: 1.4em;
+					line-height: 1.6em;
+					background-color: #FEFCE8;
+					padding: 0.8rem;
+					border-radius: 8px;
+					color: #713F12;
+					border: 1px solid #FEF08A;
+				}
+				.msg p strong {
+					font-weight: bold;
+				}
+				.msg .btn {
+					font-size: 0.9em;
+				}
+				.msg .btn {
+					background-image: none;
+					background-color: #F0F9FF;
+					border: 1px solid #3B82F6;
+					color: #1E3A8A;
+				}
+				.msg .btn:hover {
+					background-color: #BFDBFE;
+				}
+			</style>
+
+	
+
+</body></html>

@@ -1,0 +1,116 @@
+
+@font-face {
+  font-family: "FakeReceipt-Regular";
+  src: url(./fonts/24EB53_0_0.eot) format('embedded-opentype'), 
+    url(./fonts/24EB53_0_0.woff) format('woff'), 
+    url(./fonts/24EB53_0_0.ttf) format('truetype');
+  font-weight: normal !important;
+}
+
+@font-face {
+  font-family: "SansSourcePro-Regular";
+  src: url(./fonts/SourceSansPro-Regular-webfont.eot) format('embedded-opentype'), 
+    url(./fonts/SourceSansPro-Regular-webfont.woff) format('woff'), 
+    url(./fonts/SourceSansPro-Regular-webfont.ttf) format('truetype'); 
+  font-weight: normal !important;
+}
+
+@font-face {
+  font-family: "SansSourcePro-Light";
+  src: url(./fonts/SourceSansPro-Light-webfont.eot) format('embedded-opentype'), 
+    url(./fonts/SourceSansPro-Light-webfont.woff) format('woff'), 
+    url(./fonts/SourceSansPro-Light-webfont.ttf) format('truetype'); 
+  font-weight: normal !important;
+}
+
+body {
+    font-family: "SansSourcePro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6, strong, b, th {
+    font-family: "SansSourcePro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal !important;
+}
+dt {
+    font-weight: bold !important;
+}
+
+/* Custom container */
+.container-narrow { margin: 0 auto; max-width: 960px; padding: 20px 20px 0 20px; }
+
+/* Sticky footer */
+html, body { height: 100%; }
+
+#maincontent { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -80px; }
+
+#push, #footer { height: 80px; }
+
+#footer { background-color: whitesmoke; }
+
+#footer p { padding: 12px 0 0 0; }
+
+.apisection { padding-top: 20px; }
+
+.navbar h4 {
+  font-family: "FakeReceipt-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal !important;
+  color: white;
+  font-size: 28px;
+  line-height: 100%;
+  padding-bottom: 6px;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+.well {
+	width: 100%;
+	padding: 8px 0;
+}
+.table-autowidth {
+	width: auto;
+}
+.url,
+tbody tr td span,
+tbody tr td:first-child,
+dl dt,
+dl dt span {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+}
+table td dl {
+  margin: 0px;
+}
+
+table tr th:first-child {
+	width: 25%;
+}
+.dl-horizontal dt {
+  float: left;
+  width: 100px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 120px;
+}
+
+
+/*#sidebar {
+    position:fixed;
+    width: 221px;
+}
+
+@media (max-width: 767px) {
+    #sidebar {
+        position:static;
+        width:auto;
+    }
+}
+
+@media (max-width: 979px) {
+    #sidebar {
+    }
+}*/
